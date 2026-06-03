@@ -3,89 +3,265 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>LucX Auto Detailing — Austin, TX</title>
+  <title>LucX Auto Detailing — Premium Mobile Detailing in Austin, TX</title>
+  <meta name="description" content="Premium mobile auto detailing in Austin, TX. We come to you — full interior, exterior, paint protection and ceramic services for cars, SUVs and luxury vehicles. Licensed & insured." />
+  <link rel="canonical" href="https://lucxautodetailing.com/" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/img/favicon.png" />
+  <link rel="apple-touch-icon" href="/img/favicon.png" />
+  <meta name="theme-color" content="#111111" />
+
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="LucX Auto Detailing — Premium Mobile Detailing in Austin, TX" />
+  <meta property="og:description" content="We come to you. Premium mobile detailing for cars, SUVs and luxury vehicles across the Austin area." />
+  <meta property="og:image" content="https://lucxautodetailing.com/img/og-image.png" />
+  <meta property="og:url" content="https://lucxautodetailing.com/" />
+  <meta property="og:site_name" content="LucX Auto Detailing" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="LucX Auto Detailing — Premium Mobile Detailing in Austin, TX" />
+  <meta name="twitter:description" content="We come to you. Premium mobile detailing across the Austin area." />
+  <meta name="twitter:image" content="https://lucxautodetailing.com/img/og-image.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="/styles.css">
+
+  <!-- Local business structured data (helps Google Maps / local search) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoWash",
+    "name": "LucX Auto Detailing",
+    "image": "https://lucxautodetailing.com/img/og-image.png",
+    "url": "https://lucxautodetailing.com/",
+    "telephone": "+1-737-285-2529",
+    "email": "lucxautodetailing@gmail.com",
+    "priceRange": "$99–$419+",
+    "description": "Premium mobile auto detailing serving the Austin, TX metro area. We come to you.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Austin",
+      "addressRegion": "TX",
+      "addressCountry": "US"
+    },
+    "areaServed": [
+      "Austin, TX", "Round Rock, TX", "Pflugerville, TX",
+      "Leander, TX", "Cedar Park, TX", "Hutto, TX", "Manor, TX"
+    ],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "08:00",
+        "closes": "21:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "08:00",
+        "closes": "20:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/lucxdetailing",
+      "https://www.facebook.com/profile.php?id=61579180237251",
+      "https://www.tiktok.com/@lucxdetailing"
+    ]
+  }
+  </script>
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
-      <h1>LucX Auto Detailing</h1>
-      <nav class="nav">
-        <a href="#services">Serviços</a>
-        <a href="#about">Sobre</a>
-        <a href="#contact">Contato</a>
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="LucX Auto Detailing — home">
+        <img class="brand-logo" src="/img/logo-white.png" alt="LucX Auto Detailing" width="180" height="44" />
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#why">Why LucX</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
       </nav>
+      <a class="btn btn-sm nav-cta" href="#contact">Get a quote</a>
     </div>
   </header>
 
-  <main>
+  <main id="top">
     <section class="hero">
-      <div class="container">
-        <h2>Premium Mobile Auto Detailing in Austin, TX</h2>
-        <p>Servimos Austin, Round Rock, Pflugerville, Leander, Cedar Park e áreas próximas. Produtos de alta qualidade e atendimento no local.</p>
-        <p class="ctas">
-          <a class="btn" href="/quote">Start Your Quote</a>
-          <a class="btn outline" href="tel:+17372300054">Call Now</a>
-        </p>
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">100% mobile · online booking · premium service</p>
+          <h1>Premium auto detailing in Austin, TX</h1>
+          <p class="hero-copy">We come to your home or office. Interior, exterior, paint protection and full restoration — without you ever leaving the driveway.</p>
+          <div class="ctas">
+            <a class="btn" href="#contact">Request a quote</a>
+            <a class="btn outline" href="tel:+17372852529">Call now</a>
+          </div>
+          <p class="hero-trust">Licensed &amp; insured · Mon–Sat 8am–9pm · Sun 8am–8pm</p>
+        </div>
+        <div class="hero-card">
+          <p class="hero-card-title">Service area</p>
+          <ul class="hero-list">
+            <li>Austin</li>
+            <li>Round Rock</li>
+            <li>Pflugerville</li>
+            <li>Leander</li>
+            <li>Cedar Park</li>
+            <li>Hutto &amp; Manor</li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <section id="services" class="container services">
-      <h3>Nossos Serviços</h3>
-      <div class="grid">
-        <article class="card">
-          <h4>Interior Refresh</h4>
-          <p>Starting at $99 — 1–1.5h. Limpeza básica de interior para recuperar aparência e cheiro.</p>
-          <a href="/interior-refresh" class="link">Veja o que inclui</a>
+    <section id="services" class="container section services">
+      <div class="section-header">
+        <span class="section-tag">Our packages</span>
+        <h2>Clear pricing, premium results</h2>
+      </div>
+      <div class="grid service-grid">
+        <article class="card service-card">
+          <h3>Interior Refresh</h3>
+          <p class="price">Starting at $99 · 1–1.5h</p>
+          <p>A fast, deep interior clean that lifts dust, stains and odors so the cabin feels new again.</p>
         </article>
-
-        <article class="card">
-          <h4>Refresh Package</h4>
-          <p>Starting at $189 — 2–2.5h. Limpeza interior + exterior leve.</p>
-          <a href="/refresh" class="link">Veja o que inclui</a>
+        <article class="card service-card">
+          <h3>Refresh Package</h3>
+          <p class="price">Starting at $189 · 2–2.5h</p>
+          <p>Complete interior plus a light exterior wash for a fully renewed, ready-to-drive car.</p>
         </article>
-
-        <article class="card">
-          <h4>Interior Revival</h4>
-          <p>Starting at $199 — 2.5–3h. Limpeza profunda de estofados e painéis.</p>
-          <a href="/interior-revival" class="link">Veja o que inclui</a>
+        <article class="card service-card">
+          <h3>Interior Revival</h3>
+          <p class="price">Starting at $199 · 2.5–3h</p>
+          <p>Deep restoration of seats, panels and surfaces with a professional, detailed finish.</p>
         </article>
-
-        <article class="card">
-          <h4>Prestige Package</h4>
-          <p>Starting at $269 — 3–3.5h. Pacote premium para acabamento superior.</p>
-          <a href="/prestige" class="link">Veja o que inclui</a>
+        <article class="card service-card">
+          <h3>Prestige Package</h3>
+          <p class="price">Starting at $269 · 3–3.5h</p>
+          <p>Our premium package with added detail work and extra protection for your vehicle.</p>
         </article>
-
-        <article class="card">
-          <h4>Ultimate LucX Experience</h4>
-          <p>Starting at $419 — 4–5h. Experiência completa com decontaminação, proteção e interior impecável.</p>
-          <a href="/ultimate" class="link">Veja o que inclui</a>
+        <article class="card service-card featured">
+          <span class="badge">Most popular</span>
+          <h3>Ultimate LucX Experience</h3>
+          <p class="price">Starting at $419 · 4–5h</p>
+          <p>The full experience: decontamination, light ceramic finish and a flawless interior.</p>
         </article>
       </div>
-
-      <p class="small">Add-ons: Pet Hair Removal, Steam Cleaning, Odor Removal, Leather Conditioning, Child Car Seat Cleaning</p>
+      <p class="small">Available add-ons: pet hair removal, steam cleaning, odor removal, leather conditioning, UV protection.</p>
     </section>
 
-    <section id="about" class="container about">
-      <h3>Sobre Nós</h3>
-      <p>LucX nasceu da paixão por carros. Oferecemos detalhamento móvel de alta qualidade usando técnicas avançadas e produtos eco-friendly.</p>
+    <section id="why" class="container section why">
+      <div class="section-header">
+        <span class="section-tag">Why choose LucX</span>
+        <h2>We treat your car like it's our own</h2>
+      </div>
+      <div class="grid reasons-grid">
+        <article class="card reason-card">
+          <h3>100% mobile</h3>
+          <p>You pick the location, we bring everything. No drop-offs, no waiting rooms, no wasted time.</p>
+        </article>
+        <article class="card reason-card">
+          <h3>Premium products</h3>
+          <p>We use only high-grade sealants, waxes and cleaners that protect and elevate your vehicle.</p>
+        </article>
+        <article class="card reason-card">
+          <h3>Fast &amp; flexible</h3>
+          <p>Easy online booking, a professional crew, and service scheduled around your day.</p>
+        </article>
+        <article class="card reason-card">
+          <h3>Licensed &amp; insured</h3>
+          <p>Fully licensed and insured — consistent results on hatchbacks, sedans, SUVs and luxury cars.</p>
+        </article>
+      </div>
     </section>
 
-    <section id="contact" class="container contact">
-      <h3>Contato</h3>
-      <p>Telefone: <a href="tel:+17372852529">(737) 285-2529</a></p>
-      <p>Email: <a href="mailto:lucxautodetailing@gmail.com">lucxautodetailing@gmail.com</a></p>
-      <p>Horário: Seg–Sáb 8am–9pm | Dom 8am–8pm</p>
-      <p>Servimos: Austin, Round Rock, Pflugerville, Leander, Cedar Park, Hutto, Manor</p>
-      <p class="ctas"><a class="btn" href="/quote">Solicite um orçamento</a></p>
+    <section id="gallery" class="container section gallery">
+      <div class="section-header">
+        <span class="section-tag">Our work</span>
+        <h2>Before &amp; after</h2>
+      </div>
+      <div class="grid gallery-grid">
+        <!-- TODO: replace these placeholders with real photos in /public/img/.
+             Recommended: 6 images, ~1200x900px, under ~300KB each (JPG). -->
+        <figure class="gallery-item"><span class="gallery-ph">Add photo</span></figure>
+        <figure class="gallery-item"><span class="gallery-ph">Add photo</span></figure>
+        <figure class="gallery-item"><span class="gallery-ph">Add photo</span></figure>
+        <figure class="gallery-item"><span class="gallery-ph">Add photo</span></figure>
+        <figure class="gallery-item"><span class="gallery-ph">Add photo</span></figure>
+        <figure class="gallery-item"><span class="gallery-ph">Add photo</span></figure>
+      </div>
+      <p class="small">See more on <a href="https://www.instagram.com/lucxdetailing" target="_blank" rel="noopener">Instagram @lucxdetailing</a>.</p>
+    </section>
+
+    <section class="container section testimonials">
+      <div class="section-header">
+        <span class="section-tag">Reviews</span>
+        <h2>Clients who keep coming back</h2>
+      </div>
+      <div class="grid testimonial-grid">
+        <article class="card testimonial-card">
+          <p>"The on-site service was flawless. My SUV came out with a perfect finish and the crew showed up right on time."</p>
+          <strong>Pamella</strong>
+        </article>
+        <article class="card testimonial-card">
+          <p>"Best detailing I've used in Austin. No streaks, no bad smells — real care in every detail."</p>
+          <strong>Isac</strong>
+        </article>
+        <article class="card testimonial-card">
+          <p>"They left my Escalade looking showroom-new. Highly recommend for quality and convenience."</p>
+          <strong>Leo Limos</strong>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="container section contact-section">
+      <div class="contact-grid">
+        <div>
+          <span class="section-tag">Request a quote</span>
+          <h2>Let's schedule the best care for your car</h2>
+          <p>Fill out the details below or give us a call, and we'll send a personalized quote within 24 hours.</p>
+          <div class="contact-details">
+            <p><strong>Phone:</strong> <a href="tel:+17372852529">(737) 285-2529</a></p>
+            <p><strong>Email:</strong> <a href="mailto:lucxautodetailing@gmail.com">lucxautodetailing@gmail.com</a></p>
+            <p><strong>Service area:</strong> Austin, Round Rock, Pflugerville, Leander, Cedar Park, Hutto, Manor</p>
+            <p><strong>Hours:</strong> Mon–Sat 8am–9pm · Sun 8am–8pm</p>
+          </div>
+        </div>
+        <div class="contact-card">
+          <!-- TODO: create a free form at https://formspree.io, then replace YOUR_FORM_ID below.
+               Formspree emails every submission to lucxautodetailing@gmail.com (verify the address once). -->
+          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <input type="hidden" name="_subject" value="New quote request — LucX website" />
+            <!-- Honeypot anti-spam field (leave empty) -->
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true" />
+            <label>Full name<input type="text" name="name" placeholder="Your name" required></label>
+            <label>Email<input type="email" name="email" placeholder="you@email.com" required></label>
+            <label>Phone<input type="tel" name="phone" placeholder="(737) 123-4567" required></label>
+            <label>Vehicle<input type="text" name="vehicle" placeholder="Year, make and model" required></label>
+            <label>Service of interest<select name="service">
+              <option>Interior Refresh</option>
+              <option>Refresh Package</option>
+              <option>Interior Revival</option>
+              <option>Prestige Package</option>
+              <option>Ultimate LucX Experience</option>
+              <option>Not sure yet</option>
+            </select></label>
+            <label>Message<textarea name="message" placeholder="Anything else we should know?"></textarea></label>
+            <button type="submit" class="btn">Send request</button>
+          </form>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>© LucX Auto Detailing — Serving Austin & nearby areas.</p>
-      <p><a href="https://www.instagram.com/lucxdetailing">Instagram</a> • <a href="https://www.facebook.com/profile.php?id=61579180237251">Facebook</a> • <a href="https://www.tiktok.com/@lucxdetailing">TikTok</a></p>
+    <div class="container footer-inner">
+      <p>© 2026 LucX Auto Detailing — Premium mobile detailing in Austin, TX.</p>
+      <p class="footer-social"><a href="https://www.instagram.com/lucxdetailing" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/profile.php?id=61579180237251" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.tiktok.com/@lucxdetailing" target="_blank" rel="noopener">TikTok</a></p>
     </div>
   </footer>
 </body>
