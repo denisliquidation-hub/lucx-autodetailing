@@ -20,8 +20,8 @@ img{max-width:100%;display:block}
 /* Header */
 .site-header{background:#111;color:#fff;position:sticky;top:0;z-index:20;box-shadow:0 10px 40px rgba(0,0,0,0.15)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;gap:24px}
-.brand{display:flex;align-items:center;gap:12px}
-.brand-logo{height:40px;width:auto}
+.brand{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.brand-logo{height:42px;width:auto;display:block}
 .nav{margin-left:auto}
 .nav a{color:#fff;margin-left:24px;font-weight:600;opacity:.9}
 .nav a:hover{opacity:1}
@@ -107,6 +107,7 @@ img{max-width:100%;display:block}
 @media(max-width:720px){
   .site-header{padding:14px 0}
   .header-inner{flex-wrap:wrap;gap:12px}
+  .brand-logo{height:30px}
   .nav{margin-left:0;width:100%;display:flex;flex-wrap:wrap;gap:6px}
   .nav a{margin-left:0;margin-right:18px}
   .container{padding:18px}
@@ -115,3 +116,4 @@ img{max-width:100%;display:block}
   .card{padding:22px}
   .contact-card{padding:24px}
 }
+@media(max-width:430px){.brand-logo{height:26px}}
