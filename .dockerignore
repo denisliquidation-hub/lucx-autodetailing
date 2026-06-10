@@ -1,0 +1,12 @@
+node_modules
+npm-debug.log
+.git
+.gitignore
+assets
+preview
+*.log
+*.ps1
+*.bat
+README.md
+build-preview.js
+.github

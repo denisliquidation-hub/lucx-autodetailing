@@ -1,8 +1,9 @@
-FROM node:18-alpine
+FROM node:20-alpine
 WORKDIR /app
 COPY package*.json ./
-RUN npm ci --production
+# Robust install for a single-dependency static server (avoids npm ci lockfile-strictness)
+RUN npm install --omit=dev --no-audit --no-fund
 COPY . .
 ENV PORT=3000
 EXPOSE 3000
-CMD [ "node", "index.js" ]
+CMD ["node", "index.js"]

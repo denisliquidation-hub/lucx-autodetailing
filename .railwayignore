@@ -1,0 +1,5 @@
+assets
+preview
+node_modules
+*.log
+keepalive.ps1

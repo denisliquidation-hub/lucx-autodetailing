@@ -3,31 +3,31 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>LucX Auto Detailing — Premium Mobile Detailing in Austin, TX</title>
-  <meta name="description" content="Premium mobile auto detailing in Austin, TX. We come to you — full interior, exterior, paint protection and ceramic services for cars, SUVs and luxury vehicles. Licensed & insured." />
+  <title>LucX Auto Detailing — Luxury Mobile Auto Detailing in Austin, TX</title>
+  <meta name="description" content="Concierge-level mobile auto detailing in Austin, TX. Interior, exterior, paint protection and full restoration delivered to your home, office or private garage. Licensed & insured." />
   <link rel="canonical" href="https://lucxautodetailing.com/" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/img/favicon.png" />
   <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
-  <meta name="theme-color" content="#111111" />
+  <meta name="theme-color" content="#050505" />
 
   <!-- Open Graph / social sharing -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="LucX Auto Detailing — Premium Mobile Detailing in Austin, TX" />
-  <meta property="og:description" content="We come to you. Premium mobile detailing for cars, SUVs and luxury vehicles across the Austin area." />
+  <meta property="og:title" content="LucX Auto Detailing — Luxury Mobile Auto Detailing in Austin, TX" />
+  <meta property="og:description" content="Concierge-level mobile detailing for luxury vehicles across the Austin area. We come to you." />
   <meta property="og:image" content="https://lucxautodetailing.com/img/og-image.png" />
   <meta property="og:url" content="https://lucxautodetailing.com/" />
   <meta property="og:site_name" content="LucX Auto Detailing" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="LucX Auto Detailing — Premium Mobile Detailing in Austin, TX" />
-  <meta name="twitter:description" content="We come to you. Premium mobile detailing across the Austin area." />
+  <meta name="twitter:title" content="LucX Auto Detailing — Luxury Mobile Auto Detailing in Austin, TX" />
+  <meta name="twitter:description" content="Concierge-level mobile detailing for luxury vehicles across the Austin area." />
   <meta name="twitter:image" content="https://lucxautodetailing.com/img/og-image.png" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="/styles.css">
 
@@ -42,7 +42,7 @@
     "telephone": "+1-737-285-2529",
     "email": "lucxautodetailing@gmail.com",
     "priceRange": "$99–$419+",
-    "description": "Premium mobile auto detailing serving the Austin, TX metro area. We come to you.",
+    "description": "Luxury concierge mobile auto detailing serving the Austin, TX metro area. We come to you.",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Austin",
@@ -54,18 +54,8 @@
       "Leander, TX", "Cedar Park, TX", "Hutto, TX", "Manor, TX"
     ],
     "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-        "opens": "08:00",
-        "closes": "21:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Sunday",
-        "opens": "08:00",
-        "closes": "20:00"
-      }
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "08:00", "closes": "21:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "08:00", "closes": "20:00" }
     ],
     "sameAs": [
       "https://www.instagram.com/lucxdetailing",
@@ -76,10 +66,12 @@
   </script>
 </head>
 <body>
-  <header class="site-header">
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="header">
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="LucX Auto Detailing — home">
-        <img class="brand-logo" src="/img/logo-white.png" alt="LucX Auto Detailing" width="475" height="42" />
+        <img class="brand-logo" src="/img/logo-white.png" alt="LucX Auto Detailing" width="362" height="32" />
       </a>
       <nav class="nav" aria-label="Primary">
         <a href="#services">Services</a>
@@ -87,26 +79,103 @@
         <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
       </nav>
-      <a class="btn btn-sm nav-cta" href="#contact">Get a quote</a>
+      <a class="btn btn-gold btn-sm nav-cta" href="#contact">Request Premium Quote</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
+  <!-- ============ MOBILE LUXURY CONCIERGE MENU ============ -->
+  <div class="menu-backdrop" id="menuBackdrop" hidden></div>
+  <aside class="mobile-menu" id="mobileMenu" aria-hidden="true" aria-label="Mobile navigation">
+    <div class="mm-bg" aria-hidden="true"></div>
+    <div class="mm-overlay" aria-hidden="true"></div>
+    <div class="mm-particles" aria-hidden="true"></div>
+    <div class="mm-inner">
+      <div class="mm-head">
+        <img class="brand-logo" src="/img/logo-white.png" alt="LucX Auto Detailing" width="226" height="20" />
+        <button class="menu-close" id="menuClose" aria-label="Close menu">&times;</button>
+      </div>
+
+      <div class="mm-brandline">
+        <p class="mm-tagline">Luxury Auto Detailing</p>
+        <span class="mm-divider" aria-hidden="true"></span>
+      </div>
+
+      <nav class="mobile-nav" aria-label="Mobile primary">
+        <a class="mm-link" href="#services">
+          <span class="mm-link-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l2.2 5.3L20 10l-5.8 1.7L12 17l-2.2-5.3L4 10l5.8-1.7L12 3z"/></svg></span>
+          <span class="mm-link-text"><span class="mm-link-title">Services</span><span class="mm-link-desc">Premium detailing, ceramic coating and paint protection.</span></span>
+          <span class="mm-link-underline" aria-hidden="true"></span>
+        </a>
+        <a class="mm-link" href="#why">
+          <span class="mm-link-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg></span>
+          <span class="mm-link-text"><span class="mm-link-title">Why LucX</span><span class="mm-link-desc">Discover why luxury vehicle owners trust LucX.</span></span>
+          <span class="mm-link-underline" aria-hidden="true"></span>
+        </a>
+        <a class="mm-link" href="#gallery">
+          <span class="mm-link-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 16l-5-5L5 19"/></svg></span>
+          <span class="mm-link-text"><span class="mm-link-title">Gallery</span><span class="mm-link-desc">Explore our craftsmanship and attention to detail.</span></span>
+          <span class="mm-link-underline" aria-hidden="true"></span>
+        </a>
+        <a class="mm-link" href="#contact">
+          <span class="mm-link-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 4a6 6 0 0 1 6 6v3H6v-3a6 6 0 0 1 6-6z"/><path d="M4 16h16M10 19h4M12 4V2.5"/></svg></span>
+          <span class="mm-link-text"><span class="mm-link-title">Contact</span><span class="mm-link-desc">Schedule your luxury vehicle consultation.</span></span>
+          <span class="mm-link-underline" aria-hidden="true"></span>
+        </a>
+      </nav>
+
+      <div class="mm-social">
+        <div class="mm-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="mm-social-title">Trusted by Luxury Vehicle Owners</p>
+        <p class="mm-social-brands">Ferrari · Porsche · Mercedes · Lamborghini · McLaren</p>
+      </div>
+
+      <a class="mm-cta" href="#contact">Request Your VIP Quote</a>
+
+      <div class="mm-concierge">
+        <p class="mm-concierge-label">Concierge Service</p>
+        <a class="mm-concierge-phone" href="tel:+17372852529">(737) 285-2529</a>
+        <p class="mm-concierge-note">Response within 15 minutes</p>
+      </div>
+
+      <div class="mm-footer">
+        <p>Serving Luxury Vehicle Owners Across Texas</p>
+        <p class="mm-footer-brands">Ferrari · Lamborghini · Porsche · Mercedes · Rolls-Royce</p>
+      </div>
+    </div>
+  </aside>
+
   <main id="top">
+    <!-- ============ HERO ============ -->
     <section class="hero">
+      <div class="hero-bg" id="heroBg" aria-hidden="true"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-glow" aria-hidden="true"></div>
       <div class="container hero-grid">
-        <div>
-          <p class="eyebrow">100% mobile · online booking · premium service</p>
-          <h1>Premium auto detailing in Austin, TX</h1>
-          <p class="hero-copy">We come to your home or office. Interior, exterior, paint protection and full restoration — without you ever leaving the driveway.</p>
+        <div class="hero-content">
+          <p class="eyebrow">100% Mobile · Licensed &amp; Insured · Premium Vehicle Care</p>
+          <h1>Luxury Mobile Auto Detailing in Austin, TX</h1>
+          <p class="hero-copy">Concierge-level interior, exterior, paint protection and full restoration services — delivered to your home, office, or private garage.</p>
           <div class="ctas">
-            <a class="btn" href="#contact">Request a quote</a>
-            <a class="btn outline" href="tel:+17372852529">Call now</a>
+            <a class="btn btn-gold" href="#contact">Request Premium Quote</a>
+            <a class="btn btn-ghost" href="tel:+17372852529">Call Concierge</a>
           </div>
-          <p class="hero-trust">Licensed &amp; insured · Mon–Sat 8am–9pm · Sun 8am–8pm</p>
+          <p class="hero-trust">Fast response · Mobile service · Premium care at your location</p>
+
+          <ul class="trust-badges" aria-label="Why trust LucX">
+            <li class="trust-badge"><span class="dot"></span>Licensed &amp; Insured</li>
+            <li class="trust-badge"><span class="dot"></span>Mobile Concierge Service</li>
+            <li class="trust-badge"><span class="dot"></span>Interior &amp; Exterior Experts</li>
+            <li class="trust-badge"><span class="dot"></span>Paint Protection Ready</li>
+          </ul>
         </div>
-        <div class="hero-card">
-          <p class="hero-card-title">Service area</p>
-          <ul class="hero-list">
+
+        <aside class="coverage-card">
+          <p class="coverage-title">Service Coverage</p>
+          <p class="coverage-sub">Mobile detailing delivered across Austin and surrounding premium areas.</p>
+          <ul class="coverage-list">
             <li>Austin</li>
             <li>Round Rock</li>
             <li>Pflugerville</li>
@@ -114,145 +183,438 @@
             <li>Cedar Park</li>
             <li>Hutto &amp; Manor</li>
           </ul>
-        </div>
+          <p class="coverage-note">Same-day availability in select areas</p>
+        </aside>
       </div>
     </section>
 
-    <section id="services" class="container section services">
-      <div class="section-header">
-        <span class="section-tag">Our packages</span>
-        <h2>Clear pricing, premium results</h2>
-      </div>
-      <div class="grid service-grid">
-        <article class="card service-card">
-          <h3>Interior Refresh</h3>
-          <p class="price">Starting at $99 · 1–1.5h</p>
-          <p>A fast, deep interior clean that lifts dust, stains and odors so the cabin feels new again.</p>
-        </article>
-        <article class="card service-card">
-          <h3>Refresh Package</h3>
-          <p class="price">Starting at $189 · 2–2.5h</p>
-          <p>Complete interior plus a light exterior wash for a fully renewed, ready-to-drive car.</p>
-        </article>
-        <article class="card service-card">
-          <h3>Interior Revival</h3>
-          <p class="price">Starting at $199 · 2.5–3h</p>
-          <p>Deep restoration of seats, panels and surfaces with a professional, detailed finish.</p>
-        </article>
-        <article class="card service-card">
-          <h3>Prestige Package</h3>
-          <p class="price">Starting at $269 · 3–3.5h</p>
-          <p>Our premium package with added detail work and extra protection for your vehicle.</p>
-        </article>
-        <article class="card service-card featured">
-          <span class="badge">Most popular</span>
-          <h3>Ultimate LucX Experience</h3>
-          <p class="price">Starting at $419 · 4–5h</p>
-          <p>The full experience: decontamination, light ceramic finish and a flawless interior.</p>
-        </article>
-      </div>
-      <p class="small">Available add-ons: pet hair removal, steam cleaning, odor removal, leather conditioning, UV protection.</p>
-    </section>
-
-    <section id="why" class="container section why">
-      <div class="section-header">
-        <span class="section-tag">Why choose LucX</span>
-        <h2>We treat your car like it's our own</h2>
-      </div>
-      <div class="grid reasons-grid">
-        <article class="card reason-card">
-          <h3>100% mobile</h3>
-          <p>You pick the location, we bring everything. No drop-offs, no waiting rooms, no wasted time.</p>
-        </article>
-        <article class="card reason-card">
-          <h3>Premium products</h3>
-          <p>We use only high-grade sealants, waxes and cleaners that protect and elevate your vehicle.</p>
-        </article>
-        <article class="card reason-card">
-          <h3>Fast &amp; flexible</h3>
-          <p>Easy online booking, a professional crew, and service scheduled around your day.</p>
-        </article>
-        <article class="card reason-card">
-          <h3>Licensed &amp; insured</h3>
-          <p>Fully licensed and insured — consistent results on hatchbacks, sedans, SUVs and luxury cars.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="gallery" class="container section gallery">
-      <div class="section-header">
-        <span class="section-tag">Our work</span>
-        <h2>Before &amp; after</h2>
-      </div>
-      <div class="grid gallery-grid">
-        <!-- TODO: replace these placeholders with real photos in /public/img/.
-             Recommended: 6 images, ~1200x900px, under ~300KB each (JPG). -->
-        <figure class="gallery-item"><span class="gallery-ph">Add photo</span></figure>
-        <figure class="gallery-item"><span class="gallery-ph">Add photo</span></figure>
-        <figure class="gallery-item"><span class="gallery-ph">Add photo</span></figure>
-        <figure class="gallery-item"><span class="gallery-ph">Add photo</span></figure>
-        <figure class="gallery-item"><span class="gallery-ph">Add photo</span></figure>
-        <figure class="gallery-item"><span class="gallery-ph">Add photo</span></figure>
-      </div>
-      <p class="small">See more on <a href="https://www.instagram.com/lucxdetailing" target="_blank" rel="noopener">Instagram @lucxdetailing</a>.</p>
-    </section>
-
-    <section class="container section testimonials">
-      <div class="section-header">
-        <span class="section-tag">Reviews</span>
-        <h2>Clients who keep coming back</h2>
-      </div>
-      <div class="grid testimonial-grid">
-        <article class="card testimonial-card">
-          <p>"The on-site service was flawless. My SUV came out with a perfect finish and the crew showed up right on time."</p>
-          <strong>Pamella</strong>
-        </article>
-        <article class="card testimonial-card">
-          <p>"Best detailing I've used in Austin. No streaks, no bad smells — real care in every detail."</p>
-          <strong>Isac</strong>
-        </article>
-        <article class="card testimonial-card">
-          <p>"They left my Escalade looking showroom-new. Highly recommend for quality and convenience."</p>
-          <strong>Leo Limos</strong>
-        </article>
-      </div>
-    </section>
-
-    <section id="contact" class="container section contact-section">
-      <div class="contact-grid">
-        <div>
-          <span class="section-tag">Request a quote</span>
-          <h2>Let's schedule the best care for your car</h2>
-          <p>Fill out the details below or give us a call, and we'll send a personalized quote within 24 hours.</p>
-          <div class="contact-details">
-            <p><strong>Phone:</strong> <a href="tel:+17372852529">(737) 285-2529</a></p>
-            <p><strong>Email:</strong> <a href="mailto:lucxautodetailing@gmail.com">lucxautodetailing@gmail.com</a></p>
-            <p><strong>Service area:</strong> Austin, Round Rock, Pflugerville, Leander, Cedar Park, Hutto, Manor</p>
-            <p><strong>Hours:</strong> Mon–Sat 8am–9pm · Sun 8am–8pm</p>
+    <!-- ============ BRAND MARQUEE ============ -->
+    <section class="marquee-section" aria-label="Vehicles we care for">
+      <div class="container"><p class="marquee-label">Trusted to care for</p></div>
+      <div class="marquee">
+        <div class="marquee-track">
+          <div class="marquee-group">
+            <span>Porsche</span><span>Mercedes-Benz</span><span>BMW</span><span>Range Rover</span><span>Bentley</span><span>Cadillac Escalade</span><span>Lamborghini</span><span>Ferrari</span><span>Audi</span><span>Tesla</span>
+          </div>
+          <div class="marquee-group" aria-hidden="true">
+            <span>Porsche</span><span>Mercedes-Benz</span><span>BMW</span><span>Range Rover</span><span>Bentley</span><span>Cadillac Escalade</span><span>Lamborghini</span><span>Ferrari</span><span>Audi</span><span>Tesla</span>
           </div>
         </div>
-        <div class="contact-card">
-          <!-- TODO: create a free form at https://formspree.io, then replace YOUR_FORM_ID below.
-               Formspree emails every submission to lucxautodetailing@gmail.com (verify the address once). -->
-          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-            <input type="hidden" name="_subject" value="New quote request — LucX website" />
-            <!-- Honeypot anti-spam field (leave empty) -->
-            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true" />
-            <label>Full name<input type="text" name="name" placeholder="Your name" required></label>
-            <label>Email<input type="email" name="email" placeholder="you@email.com" required></label>
-            <label>Phone<input type="tel" name="phone" placeholder="(737) 123-4567" required></label>
-            <label>Vehicle<input type="text" name="vehicle" placeholder="Year, make and model" required></label>
-            <label>Service of interest<select name="service">
-              <option>Interior Refresh</option>
-              <option>Refresh Package</option>
-              <option>Interior Revival</option>
-              <option>Prestige Package</option>
-              <option>Ultimate LucX Experience</option>
-              <option>Not sure yet</option>
-            </select></label>
-            <label>Message<textarea name="message" placeholder="Anything else we should know?"></textarea></label>
-            <button type="submit" class="btn">Send request</button>
-          </form>
+      </div>
+    </section>
+
+    <!-- ============ PACKAGES ============ -->
+    <section id="services" class="section services">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-tag">Tailored Experiences</span>
+          <h2>Experience luxury vehicle care</h2>
+          <p class="section-sub">Every treatment is designed to preserve, protect and elevate the appearance of your vehicle.</p>
+        </div>
+
+        <div class="grid pkg-grid">
+          <article class="lux-card pkg-card" data-reveal>
+            <div class="pkg-media"><img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=800&q=72" alt="Luxury car interior detailing" loading="lazy"><span class="pkg-tag">Interior</span><span class="pkg-veil" aria-hidden="true"></span></div>
+            <div class="pkg-body">
+              <h3 class="pkg-title">Essential Interior Care</h3>
+              <div class="pkg-price"><span class="pkg-price-label">Starting at</span><span class="pkg-price-value">$99</span><span class="pkg-time">Estimated time · 1–1.5 hours</span></div>
+              <ul class="pkg-benefits">
+                <li>Deep interior vacuum &amp; wipe-down</li>
+                <li>Dust, stain &amp; odor removal</li>
+                <li>Console &amp; trim refresh</li>
+                <li>Streak-free glass</li>
+              </ul>
+              <a class="pkg-cta" href="#contact">Book My Experience</a>
+            </div>
+          </article>
+
+          <article class="lux-card pkg-card" data-reveal>
+            <div class="pkg-media"><img src="https://images.unsplash.com/photo-1493238792000-8113da705763?auto=format&fit=crop&w=800&q=72" alt="Luxury exterior detailing" loading="lazy"><span class="pkg-tag">Refresh</span><span class="pkg-veil" aria-hidden="true"></span></div>
+            <div class="pkg-body">
+              <h3 class="pkg-title">Signature Refresh</h3>
+              <div class="pkg-price"><span class="pkg-price-label">Starting at</span><span class="pkg-price-value">$189</span><span class="pkg-time">Estimated time · 2–2.5 hours</span></div>
+              <ul class="pkg-benefits">
+                <li>Full interior detail</li>
+                <li>Premium exterior hand wash</li>
+                <li>Wheels &amp; tires dressed</li>
+                <li>Ready-to-drive finish</li>
+              </ul>
+              <a class="pkg-cta" href="#contact">Book My Experience</a>
+            </div>
+          </article>
+
+          <article class="lux-card pkg-card" data-reveal>
+            <div class="pkg-media"><img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=800&q=72" alt="Deep interior restoration" loading="lazy"><span class="pkg-tag">Restoration</span><span class="pkg-veil" aria-hidden="true"></span></div>
+            <div class="pkg-body">
+              <h3 class="pkg-title">Interior Restoration</h3>
+              <div class="pkg-price"><span class="pkg-price-label">Starting at</span><span class="pkg-price-value">$199</span><span class="pkg-time">Estimated time · 2.5–3 hours</span></div>
+              <ul class="pkg-benefits">
+                <li>Deep seat &amp; upholstery restoration</li>
+                <li>Panel &amp; surface rejuvenation</li>
+                <li>Leather conditioning</li>
+                <li>Meticulous detail work</li>
+              </ul>
+              <a class="pkg-cta" href="#contact">Book My Experience</a>
+            </div>
+          </article>
+
+          <article class="lux-card pkg-card" data-reveal>
+            <div class="pkg-media"><img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=800&q=72" alt="Luxury black Mercedes detailing" loading="lazy"><span class="pkg-tag">Protection</span><span class="pkg-veil" aria-hidden="true"></span></div>
+            <div class="pkg-body">
+              <h3 class="pkg-title">Prestige Protection</h3>
+              <div class="pkg-price"><span class="pkg-price-label">Starting at</span><span class="pkg-price-value">$269</span><span class="pkg-time">Estimated time · 3–3.5 hours</span></div>
+              <ul class="pkg-benefits">
+                <li>Complete interior &amp; exterior detail</li>
+                <li>Premium surface protection</li>
+                <li>Added paint protection</li>
+                <li>Luxury finish enhancement</li>
+              </ul>
+              <a class="pkg-cta" href="#contact">Book My Experience</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Featured signature package -->
+        <article class="pkg-featured" data-reveal>
+          <div class="pkg-featured-media"><img src="https://images.unsplash.com/photo-1583267746897-2cf415887172?auto=format&fit=crop&w=1100&q=75" alt="Premium detailing studio" loading="lazy"><span class="pkg-veil" aria-hidden="true"></span></div>
+          <div class="pkg-featured-body">
+            <span class="badge">Signature Experience</span>
+            <h3 class="pkg-title">The LucX Signature Experience</h3>
+            <p class="pkg-featured-copy">Our most complete treatment — full decontamination, a light ceramic finish and a flawless interior, delivered with concierge-level craftsmanship.</p>
+            <div class="pkg-price big"><span class="pkg-price-label">Starting at</span><span class="pkg-price-value">$419</span><span class="pkg-time">Estimated time · 4–5 hours</span></div>
+            <ul class="pkg-benefits two-col">
+              <li>Full multi-stage decontamination</li>
+              <li>Light ceramic protective finish</li>
+              <li>Flawless interior detailing</li>
+              <li>Showroom-level presentation</li>
+            </ul>
+            <a class="pkg-cta solid" href="#contact">Reserve My Experience</a>
+          </div>
+        </article>
+
+        <p class="small" data-reveal>Available add-ons: pet hair removal, steam cleaning, odor removal, leather conditioning, UV protection, paint protection.</p>
+      </div>
+    </section>
+
+    <!-- ============ WHY CLIENTS CHOOSE LUCX (comparison) ============ -->
+    <section class="section compare">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-tag">The Difference</span>
+          <h2>Why clients choose LucX</h2>
+        </div>
+        <div class="compare-grid">
+          <div class="compare-col compare-bad" data-reveal>
+            <h3>Traditional Car Wash</h3>
+            <ul>
+              <li>Rushed service</li>
+              <li>Generic products</li>
+              <li>Minimal protection</li>
+              <li>No craftsmanship</li>
+            </ul>
+          </div>
+          <div class="compare-col compare-good" data-reveal>
+            <h3>LucX Auto Detailing</h3>
+            <ul>
+              <li>Luxury-grade products</li>
+              <li>Precision craftsmanship</li>
+              <li>Paint preservation</li>
+              <li>Premium protection</li>
+              <li>Concierge experience</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ THE LUCX STANDARD ============ -->
+    <section class="lucx-standard">
+      <div class="container lucx-standard-inner" data-reveal>
+        <span class="ls-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/><path d="M9.3 12l1.9 1.9L15 10"/></svg>
+        </span>
+        <span class="section-tag">The LucX Standard</span>
+        <h2>Crafted to exceed expectations</h2>
+        <p>Every vehicle receives meticulous attention, premium-grade products, and craftsmanship designed to exceed expectations.</p>
+        <div class="ls-proof">
+          <div class="ls-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="ls-trust">Trusted by luxury vehicle owners across the Austin area.</p>
+          <p class="ls-brands">Ferrari · Porsche · Mercedes · Lamborghini · Rolls-Royce</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RECOMMENDATION CTA ============ -->
+    <section class="reco-band">
+      <div class="container reco-inner" data-reveal>
+        <div>
+          <h3>Not sure what your vehicle needs?</h3>
+          <p>Tell us about your car and we'll recommend the right level of concierge care.</p>
+        </div>
+        <a class="btn btn-gold" href="#contact">Get My Recommendation</a>
+      </div>
+    </section>
+
+    <!-- ============ WHY LUCX ============ -->
+    <section id="why" class="section why">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-tag">Why LucX</span>
+          <h2>Why luxury vehicle owners choose LucX</h2>
+        </div>
+        <div class="grid reasons-grid">
+          <article class="lux-card reason-card" data-reveal>
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg>
+            </span>
+            <h3>We come to you</h3>
+            <p>Home, office, condo, private garage or fleet location — your schedule, your address.</p>
+          </article>
+          <article class="lux-card reason-card" data-reveal>
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l1.8 3.7L18 7.3l-3 2.9.7 4.1L12 12.4 8.3 14.3 9 10.2 6 7.3l4.2-.6L12 3z"/><path d="M5 19h14"/></svg>
+            </span>
+            <h3>Premium-safe process</h3>
+            <p>Careful wash methods, quality products and detail-focused execution on every panel.</p>
+          </article>
+          <article class="lux-card reason-card" data-reveal>
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg>
+            </span>
+            <h3>Protection-first approach</h3>
+            <p>Designed to preserve paint, interior materials, trims and finish for the long run.</p>
+          </article>
+          <article class="lux-card reason-card" data-reveal>
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 4a6 6 0 0 1 6 6v3H6v-3a6 6 0 0 1 6-6z"/><path d="M4 16h16M12 4V2.5M10 19h4"/></svg>
+            </span>
+            <h3>Concierge experience</h3>
+            <p>Simple booking, professional communication and clean, on-time execution.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRUST STRIP ============ -->
+    <section class="trust-strip">
+      <div class="container">
+        <p class="trust-quote" data-reveal>Built for drivers who expect more than a basic wash.</p>
+      </div>
+    </section>
+
+    <!-- ============ SHOWROOM (gallery) ============ -->
+    <section id="gallery" class="section gallery">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-tag">The Showroom</span>
+          <h2 class="gallery-h2">Luxury detailing.<br><span class="accent">Wherever you are.</span></h2>
+          <p class="section-sub">Your driveway becomes our showroom — premium detailing, paint correction and ceramic protection delivered to your home, office or private garage.</p>
+        </div>
+
+        <!-- Premium draggable Before/After comparator.
+             TODO: set .ba-before src to a real "before" photo for a true transformation. -->
+        <div class="ba-compare" data-reveal>
+          <div class="ba-stage" id="baStage" role="slider" tabindex="0"
+               aria-label="Drag to compare before and after detailing" aria-valuemin="0" aria-valuemax="100" aria-valuenow="20">
+            <img class="ba-after" src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=1400&q=75" alt="After — detailed by LucX" draggable="false">
+            <img class="ba-before" src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=1400&q=75" alt="Before detailing" draggable="false">
+            <span class="ba-label ba-label-before">Before</span>
+            <span class="ba-label ba-label-after">After</span>
+            <div class="ba-divider"><div class="ba-handle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 7l-4 5 4 5"/><path d="M14 7l4 5-4 5"/></svg></div></div>
+          </div>
+          <p class="ba-caption">Drag to reveal the transformation</p>
+        </div>
+
+        <!-- TODO: these are placeholder pairs. Drop real BEFORE/AFTER photos in /public/img/
+             and set gd-before to the "before" shot for a true reveal slider. -->
+        <div class="grid gd-grid">
+          <figure class="gd-card" data-reveal>
+            <div class="gd-media">
+              <img class="gd-after" src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=800&q=72" alt="Mobile detailing at a private residence" loading="lazy">
+              <img class="gd-before" src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=800&q=72" alt="" aria-hidden="true" loading="lazy">
+              <span class="gd-badge">Mobile Detailing</span><span class="gd-hint">Reveal</span>
+            </div>
+          </figure>
+          <figure class="gd-card" data-reveal>
+            <div class="gd-media">
+              <img class="gd-after" src="https://images.unsplash.com/photo-1502161254066-6c74afbf07aa?auto=format&fit=crop&w=800&q=72" alt="Exterior enhancement" loading="lazy">
+              <img class="gd-before" src="https://images.unsplash.com/photo-1502161254066-6c74afbf07aa?auto=format&fit=crop&w=800&q=72" alt="" aria-hidden="true" loading="lazy">
+              <span class="gd-badge">Exterior Enhancement</span><span class="gd-hint">Reveal</span>
+            </div>
+          </figure>
+          <figure class="gd-card" data-reveal>
+            <div class="gd-media">
+              <img class="gd-after" src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=72" alt="Paint correction" loading="lazy">
+              <img class="gd-before" src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=72" alt="" aria-hidden="true" loading="lazy">
+              <span class="gd-badge">Paint Perfection</span><span class="gd-hint">Reveal</span>
+            </div>
+          </figure>
+          <figure class="gd-card" data-reveal>
+            <div class="gd-media">
+              <img class="gd-after" src="https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=800&q=72" alt="Ceramic protection" loading="lazy">
+              <img class="gd-before" src="https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=800&q=72" alt="" aria-hidden="true" loading="lazy">
+              <span class="gd-badge">Ceramic Protection</span><span class="gd-hint">Reveal</span>
+            </div>
+          </figure>
+          <figure class="gd-card" data-reveal>
+            <div class="gd-media">
+              <img class="gd-after" src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=800&q=72" alt="Interior restoration" loading="lazy">
+              <img class="gd-before" src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=800&q=72" alt="" aria-hidden="true" loading="lazy">
+              <span class="gd-badge">Interior Restoration</span><span class="gd-hint">Reveal</span>
+            </div>
+          </figure>
+          <figure class="gd-card" data-reveal>
+            <div class="gd-media">
+              <img class="gd-after" src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=800&q=72" alt="Luxury maintenance detail" loading="lazy">
+              <img class="gd-before" src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=800&q=72" alt="" aria-hidden="true" loading="lazy">
+              <span class="gd-badge">Luxury Maintenance</span><span class="gd-hint">Reveal</span>
+            </div>
+          </figure>
+        </div>
+
+        <!-- Featured video -->
+        <div class="showcase-video" data-reveal>
+          <img class="sv-poster" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=75" alt="" aria-hidden="true" loading="lazy">
+          <span class="sv-veil" aria-hidden="true"></span>
+          <div class="sv-content">
+            <span class="section-tag">Film</span>
+            <h3>Watch the LucX experience</h3>
+            <!-- TODO: replace href with a hosted MP4 / YouTube embed when available -->
+            <a class="sv-play" href="https://www.tiktok.com/@lucxdetailing" target="_blank" rel="noopener" aria-label="Play video">
+              <span class="sv-play-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+              <span>Play Video</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Showroom statistics -->
+        <div class="stats showroom-stats" data-reveal>
+          <div class="stat"><span class="stat-num" data-count="500" data-suffix="+">0</span><span class="stat-label">Vehicles detailed</span></div>
+          <div class="stat"><span class="stat-num" data-count="98" data-suffix="%">0</span><span class="stat-label">Client satisfaction</span></div>
+          <div class="stat"><span class="stat-num" data-count="100" data-suffix="%">0</span><span class="stat-label">Mobile service</span></div>
+          <div class="stat"><span class="stat-num" data-count="5" data-suffix="★">0</span><span class="stat-label">Average rating</span></div>
+        </div>
+
+        <div class="gallery-cta" data-reveal>
+          <a class="btn btn-ghost" href="https://www.instagram.com/lucxdetailing" target="_blank" rel="noopener">See more on Instagram</a>
+          <a class="btn btn-gold" href="#contact">Request Premium Quote</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="section process">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-tag">The Process</span>
+          <h2>How it works</h2>
+        </div>
+        <div class="grid process-grid">
+          <div class="process-step" data-reveal>
+            <span class="ps-num">01</span>
+            <span class="ps-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4M9 14h6"/></svg></span>
+            <h3>Schedule your service</h3>
+            <p>Pick a time and share your vehicle details — booking takes minutes.</p>
+          </div>
+          <div class="process-step" data-reveal>
+            <span class="ps-num">02</span>
+            <span class="ps-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 13l2-5a3 3 0 0 1 2.8-2h8.4A3 3 0 0 1 19 8l2 5M3 13h18v4H3zM7 17v2M17 17v2"/></svg></span>
+            <h3>We come to you</h3>
+            <p>Our mobile setup arrives at your home, office or private garage.</p>
+          </div>
+          <div class="process-step" data-reveal>
+            <span class="ps-num">03</span>
+            <span class="ps-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l2.2 5.3L20 10l-5.8 1.7L12 17l-2.2-5.3L4 10l5.8-1.7L12 3z"/></svg></span>
+            <h3>Luxury treatment begins</h3>
+            <p>Premium products and precision craftsmanship, panel by panel.</p>
+          </div>
+          <div class="process-step" data-reveal>
+            <span class="ps-num">04</span>
+            <span class="ps-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/><path d="M9.3 12l1.9 1.9L15 10"/></svg></span>
+            <h3>Enjoy showroom results</h3>
+            <p>Step into a flawless, protected vehicle — without leaving home.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="section testimonials">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-tag">Reviews</span>
+          <h2>Trusted by Austin drivers who care about the details</h2>
+        </div>
+        <div class="grid testimonial-grid">
+          <article class="lux-card testimonial-card" data-reveal>
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>"The on-site service was flawless. My SUV came out with a perfect finish and the crew showed up right on time."</p>
+            <div class="reviewer"><span class="avatar">P</span><span><strong>Pamella</strong><small>SUV owner</small></span></div>
+          </article>
+          <article class="lux-card testimonial-card" data-reveal>
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>"Best detailing I've used in Austin. No streaks, no bad smells — real care in every detail."</p>
+            <div class="reviewer"><span class="avatar">I</span><span><strong>Isac</strong><small>Austin client</small></span></div>
+          </article>
+          <article class="lux-card testimonial-card" data-reveal>
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>"They left my Escalade looking showroom-new. Highly recommend for quality and convenience."</p>
+            <div class="reviewer"><span class="avatar">L</span><span><strong>Leo</strong><small>Cadillac Escalade</small></span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section class="final-cta">
+      <div class="container final-cta-inner" data-reveal>
+        <span class="section-tag">Concierge Detailing</span>
+        <h2>Ready to experience luxury detailing?</h2>
+        <p>Your vehicle deserves more than a car wash. Book a premium detailing experience at your home, office or private garage.</p>
+        <div class="ctas center">
+          <a class="btn btn-gold" href="#contact">Book My Detailing Experience</a>
+          <a class="btn btn-ghost" href="#contact">Get VIP Quote</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="contact-grid">
+          <div data-reveal>
+            <span class="section-tag">Request a quote</span>
+            <h2>Let's schedule the best care for your car</h2>
+            <p class="section-sub">Share a few details or call us, and we'll send a personalized quote within 24 hours.</p>
+            <div class="contact-details">
+              <p><span class="ci">Phone</span><a href="tel:+17372852529">(737) 285-2529</a></p>
+              <p><span class="ci">Email</span><a href="mailto:lucxautodetailing@gmail.com">lucxautodetailing@gmail.com</a></p>
+              <p><span class="ci">Service area</span>Austin, Round Rock, Pflugerville, Leander, Cedar Park, Hutto, Manor</p>
+              <p><span class="ci">Hours</span>Mon–Sat 8am–9pm · Sun 8am–8pm</p>
+            </div>
+          </div>
+          <div class="contact-card" data-reveal>
+            <!-- TODO: create a free form at https://formspree.io, then replace YOUR_FORM_ID below.
+                 Formspree emails every submission to lucxautodetailing@gmail.com (verify the address once). -->
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+              <input type="hidden" name="_subject" value="New premium quote request — LucX website" />
+              <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true" />
+              <label>Full name<input type="text" name="name" placeholder="Your name" required></label>
+              <label>Email<input type="email" name="email" placeholder="you@email.com" required></label>
+              <label>Phone<input type="tel" name="phone" placeholder="(737) 123-4567" required></label>
+              <label>Vehicle<input type="text" name="vehicle" placeholder="Year, make and model" required></label>
+              <label>Service of interest<select name="service">
+                <option>Interior Refresh</option>
+                <option>Refresh Package</option>
+                <option>Interior Revival</option>
+                <option>Prestige Package</option>
+                <option>Ultimate LucX Experience</option>
+                <option>Not sure yet — recommend for me</option>
+              </select></label>
+              <label>Message<textarea name="message" placeholder="Anything else we should know?"></textarea></label>
+              <button type="submit" class="btn btn-gold full">Send request</button>
+            </form>
+          </div>
         </div>
       </div>
     </section>
@@ -260,9 +622,36 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© 2026 LucX Auto Detailing — Premium mobile detailing in Austin, TX.</p>
-      <p class="footer-social"><a href="https://www.instagram.com/lucxdetailing" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/profile.php?id=61579180237251" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.tiktok.com/@lucxdetailing" target="_blank" rel="noopener">TikTok</a></p>
+      <div class="footer-brand">
+        <img class="brand-logo" src="/img/logo-white.png" alt="LucX Auto Detailing" width="282" height="25" />
+        <p>Luxury mobile auto detailing — Austin, TX.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#why">Why LucX</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/lucxdetailing" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/profile.php?id=61579180237251" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.tiktok.com/@lucxdetailing" target="_blank" rel="noopener">TikTok</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 LucX Auto Detailing. All rights reserved.</p>
+      <a class="bwd-credit" href="https://buildwithdenis.com" target="_blank" rel="noopener" aria-label="Crafted by Denis Camargo — buildwithdenis.com">
+        <svg class="bwd-mark" viewBox="0 0 512 512" role="img" aria-hidden="true">
+          <defs><linearGradient id="bwdg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FF2D7A"/><stop offset="100%" stop-color="#D20E36"/></linearGradient></defs>
+          <circle cx="256" cy="256" r="220" fill="#0f0f18" stroke="url(#bwdg)" stroke-width="14"/>
+          <text x="256" y="328" font-family="Sora,system-ui,sans-serif" font-size="208" font-weight="700" font-style="italic" fill="#fafafa" text-anchor="middle" letter-spacing="-12">dc</text>
+          <circle cx="384" cy="328" r="18" fill="#FF2D7A"/>
+        </svg>
+        <span class="bwd-text"><span class="bwd-by">Crafted by Denis Camargo</span><span class="bwd-url">buildwithdenis.com</span></span>
+      </a>
     </div>
   </footer>
+
+  <script src="/app.js" defer></script>
 </body>
 </html>
