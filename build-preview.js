@@ -21,8 +21,11 @@ const IMAGES = [
   'https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=800&q=72',  // showroom: ceramic
   'https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=800&q=72',  // showroom: maintenance
   'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=75', // showroom: video poster
-  'https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=1400&q=75', // before/after comparator
 ];
+// Local photos to inline (before/after pair + service-area city cards)
+const LOCAL_JPG = ['before.jpg', 'after.jpg',
+  'city-austin.jpg', 'city-round-rock.jpg', 'city-georgetown.jpg', 'city-cedar-park.jpg',
+  'city-pflugerville.jpg', 'city-hutto.jpg', 'city-lago-vista.jpg', 'city-manor.jpg'];
 
 function get(url) {
   return new Promise((resolve, reject) => {
@@ -46,7 +49,7 @@ const uri = (file, mime) =>
   let css = fs.readFileSync(path.join(pub, 'styles.css'), 'utf8');
   const js = fs.readFileSync(path.join(pub, 'app.js'), 'utf8');
 
-  const logo = uri('logo-white.png', 'image/png');
+  const logo = uri('logo-gold.png', 'image/png');
   const favicon = uri('favicon.png', 'image/png');
   const apple = uri('apple-touch-icon.png', 'image/png');
 
@@ -65,11 +68,17 @@ const uri = (file, mime) =>
 
   html = html.replace('<link rel="stylesheet" href="/styles.css">', `<style>\n${css}\n</style>`);
   html = html.replace('<script src="/app.js" defer></script>', `<script>\n${js}\n</script>`);
-  html = html.split('/img/logo-white.png').join(logo);
+  html = html.split('/img/logo-gold.png').join(logo);
   html = html.split('/img/favicon.png').join(favicon);
   html = html.split('/img/apple-touch-icon.png').join(apple);
   // inline package <img> sources too
   for (const url in dataUris) { html = html.split(url).join(dataUris[url]); }
+  // inline local before/after photos if present
+  for (const f of LOCAL_JPG) {
+    try {
+      html = html.split('/img/' + f).join(uri(f, 'image/jpeg'));
+    } catch (e) { console.warn('skip local img', f, '-', e.message); }
+  }
 
   const out = path.join(__dirname, 'preview');
   fs.mkdirSync(out, { recursive: true });
