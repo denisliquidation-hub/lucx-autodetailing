@@ -332,47 +332,36 @@ body.menu-open .site-footer{filter:blur(8px);transform:scale(.97);transition:fil
 .stat-label{display:block;margin-top:12px;color:var(--muted);font-size:0.82rem;text-transform:uppercase;letter-spacing:0.12em}
 @media(max-width:640px){.stats{grid-template-columns:1fr 1fr;gap:6px 0}.stat{border-left:none}.stat:nth-child(3),.stat:nth-child(4){border-top:1px solid var(--hairline)}}
 
-/* ---------- Luxury packages section ---------- */
+/* ---------- Packages & pricing ---------- */
 .services,.compare,.lucx-standard{--pg:#D4AF37;--pg2:#E6C55A}
 .services{position:relative;overflow:hidden;background:linear-gradient(180deg,#050b18 0%,#0c1a2e 50%,#050b18 100%)}
-.services::before{content:'';position:absolute;left:50%;top:36%;transform:translate(-50%,-50%);width:min(920px,92%);height:620px;background:radial-gradient(closest-side,rgba(212,175,55,0.12),transparent 70%);pointer-events:none;z-index:0}
+.services::before{content:'';position:absolute;left:50%;top:28%;transform:translate(-50%,-50%);width:min(920px,92%);height:640px;background:radial-gradient(closest-side,rgba(212,175,55,0.1),transparent 70%);pointer-events:none;z-index:0}
 .services > .container{position:relative;z-index:1}
-
-.pkg-grid{grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:22px}
-.pkg-card{padding:0;overflow:hidden;display:flex;flex-direction:column}
-.pkg-media{position:relative;aspect-ratio:16/10;overflow:hidden}
-.pkg-media img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
-.pkg-card:hover .pkg-media img{transform:scale(1.07)}
-.pkg-veil{position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,0.08),rgba(15,30,50,0.6) 76%,#0f1e33)}
-.pkg-tag{position:absolute;top:12px;left:12px;z-index:2;font-size:0.68rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--pg2);background:rgba(0,0,0,0.55);border:1px solid rgba(212,175,55,0.3);padding:5px 11px;border-radius:999px;backdrop-filter:blur(6px)}
-.pkg-body{padding:24px 26px 28px;display:flex;flex-direction:column;flex:1}
-.pkg-title{font-size:1.32rem;font-weight:700;color:#fff;margin:0}
-.pkg-price{margin:14px 0 18px;display:flex;flex-direction:column;gap:2px}
-.pkg-price-label{font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.6)}
-.pkg-price-value{font-family:Sora,sans-serif;font-size:2.4rem;font-weight:800;line-height:1;background:linear-gradient(120deg,var(--pg2),var(--pg));-webkit-background-clip:text;background-clip:text;color:transparent}
-.pkg-time{font-size:0.8rem;color:rgba(255,255,255,0.6);margin-top:5px}
-.pkg-benefits{list-style:none;padding:0;margin:0 0 22px;display:flex;flex-direction:column;gap:10px}
-.pkg-benefits li{position:relative;padding-left:26px;font-size:0.9rem;color:rgba(255,255,255,0.78);line-height:1.4}
-.pkg-benefits li::before{content:'';position:absolute;left:0;top:2px;width:16px;height:16px;border-radius:50%;background:rgba(212,175,55,0.14);border:1px solid rgba(212,175,55,0.42)}
-.pkg-benefits li::after{content:'';position:absolute;left:6px;top:5px;width:4px;height:8px;border:solid var(--pg2);border-width:0 2px 2px 0;transform:rotate(45deg)}
+.pkg-group{max-width:1100px;margin:0 auto 18px;font-family:Sora,sans-serif;font-size:0.82rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-3);font-weight:700}
+.pkg-group + .pkg-grid{margin-bottom:46px}
+.pkg-grid{grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;max-width:1100px;margin:0 auto}
+.pkg-card{position:relative;overflow:hidden;display:flex;flex-direction:column;background:linear-gradient(180deg,rgba(26,42,66,0.4),rgba(11,22,38,0.55));border:1px solid var(--hairline);border-radius:20px;padding:28px 28px 30px;transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}
+.pkg-card::before{content:'';position:absolute;left:0;top:0;right:0;height:3px;background:var(--gold-grad);transform:scaleX(0);transform-origin:left;transition:transform .4s ease}
+.pkg-card:hover{transform:translateY(-6px);border-color:rgba(212,175,55,0.35);box-shadow:0 26px 70px rgba(0,0,0,0.55),0 0 30px rgba(212,175,55,0.08)}
+.pkg-card:hover::before{transform:scaleX(1)}
+.pkg-title{font-family:Sora,sans-serif;font-size:1.4rem;font-weight:700;color:#fff;margin:0}
+.pkg-note{margin:7px 0 0;color:var(--muted);font-size:0.85rem;line-height:1.4}
+.pkg-tiers{margin:20px 0 22px;border-top:1px solid var(--hairline)}
+.pkg-tier{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:11px 0;border-bottom:1px solid var(--hairline)}
+.pkg-veh{color:rgba(245,241,232,0.72);font-size:0.9rem}
+.pkg-p{font-family:Sora,sans-serif;font-weight:700;font-size:1.3rem;color:var(--gold-3);line-height:1}
+.pkg-inc-label{margin:0 0 12px;font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold-3);font-weight:700}
+.pkg-inc{list-style:none;padding:0;margin:0 0 26px;display:flex;flex-direction:column;gap:9px}
+.pkg-inc li{position:relative;padding-left:26px;font-size:0.9rem;color:rgba(245,241,232,0.8);line-height:1.45}
+.pkg-inc li::before{content:'';position:absolute;left:0;top:2px;width:16px;height:16px;border-radius:50%;background:rgba(212,175,55,0.14);border:1px solid rgba(212,175,55,0.42)}
+.pkg-inc li::after{content:'';position:absolute;left:6px;top:5px;width:4px;height:8px;border:solid var(--pg2);border-width:0 2px 2px 0;transform:rotate(45deg)}
 .pkg-cta{margin-top:auto;display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:14px;font-weight:600;letter-spacing:0.03em;color:var(--pg2);border:1px solid rgba(212,175,55,0.4);background:rgba(212,175,55,0.06);transition:background .25s ease,color .25s ease,border-color .25s ease,transform .25s ease}
 .pkg-cta:hover{background:linear-gradient(120deg,var(--pg),var(--pg2));color:#1a1206;border-color:transparent;transform:translateY(-2px)}
-.pkg-card:hover{transform:translateY(-6px);border-color:rgba(212,175,55,0.3);box-shadow:0 26px 70px rgba(0,0,0,0.55),0 0 30px rgba(212,175,55,0.08)}
-
-/* featured signature package */
-.pkg-featured{position:relative;display:grid;grid-template-columns:1.05fr 1fr;margin-top:26px;border-radius:26px;overflow:hidden;border:1px solid rgba(212,175,55,0.45);background:linear-gradient(180deg,rgba(26,22,10,0.55),rgba(11,22,38,0.85));box-shadow:0 40px 100px rgba(0,0,0,0.6),0 0 60px rgba(212,175,55,0.14);transition:transform .3s ease,box-shadow .3s ease}
-.pkg-featured:hover{transform:translateY(-5px);box-shadow:0 48px 120px rgba(0,0,0,0.65),0 0 80px rgba(212,175,55,0.2)}
-.pkg-featured-media{position:relative;min-height:360px}
-.pkg-featured-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.pkg-featured .pkg-veil{background:linear-gradient(90deg,rgba(11,22,38,0.15) 30%,rgba(11,22,38,0.9))}
-.pkg-featured-body{position:relative;z-index:1;padding:40px 42px;display:flex;flex-direction:column;justify-content:center}
-.pkg-featured .badge{position:static;align-self:flex-start;margin-bottom:16px;background:linear-gradient(120deg,var(--pg),var(--pg2));color:#1a1206}
-.pkg-featured .pkg-title{font-size:1.9rem}
-.pkg-featured-copy{color:rgba(255,255,255,0.75);margin:14px 0 18px;font-size:1rem;line-height:1.6}
-.pkg-price.big{margin:0 0 20px}
-.pkg-price.big .pkg-price-value{font-size:3rem}
-.pkg-benefits.two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px 22px;margin-bottom:26px}
-.pkg-cta.solid{position:relative;overflow:hidden;align-self:flex-start;padding:15px 32px;background:linear-gradient(120deg,var(--pg),var(--pg2));color:#1a1206;border-color:transparent;box-shadow:0 14px 40px rgba(212,175,55,0.3)}
+/* featured (LucX Ultimate) */
+.pkg-card.featured{border-color:rgba(212,175,55,0.5);background:linear-gradient(180deg,rgba(40,33,12,0.42),rgba(11,22,38,0.72));box-shadow:0 30px 80px rgba(0,0,0,0.5),0 0 50px rgba(212,175,55,0.1)}
+.pkg-card.featured::before{transform:scaleX(1)}
+.pkg-badge{position:absolute;top:18px;right:20px;background:var(--gold-grad);color:#1a1206;font-size:0.62rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:5px 11px;border-radius:999px}
+.pkg-cta.solid{background:linear-gradient(120deg,var(--pg),var(--pg2));color:#1a1206;border-color:transparent;box-shadow:0 14px 40px rgba(212,175,55,0.28);position:relative;overflow:hidden}
 .pkg-cta.solid::after{content:'';position:absolute;top:0;left:-130%;width:55%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,0.6),transparent);transform:skewX(-18deg);animation:mmShine 5s ease-in-out infinite;pointer-events:none}
 .pkg-cta.solid:hover{transform:translateY(-2px);box-shadow:0 20px 52px rgba(212,175,55,0.45)}
 

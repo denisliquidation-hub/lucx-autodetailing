@@ -10,11 +10,6 @@ const pub = path.join(__dirname, 'public');
 const IMAGES = [
   'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1900&q=80', // hero
   'https://images.unsplash.com/photo-1614200187524-dc4b892acf16?auto=format&fit=crop&w=900&q=75',  // mobile menu
-  'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=800&q=72',  // pkg: interior
-  'https://images.unsplash.com/photo-1493238792000-8113da705763?auto=format&fit=crop&w=800&q=72',  // pkg: refresh
-  'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=800&q=72',  // pkg: restoration
-  'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=800&q=72',  // pkg: protection
-  'https://images.unsplash.com/photo-1583267746897-2cf415887172?auto=format&fit=crop&w=1100&q=75', // pkg: signature (featured)
   'https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=800&q=72',  // showroom: mobile
   'https://images.unsplash.com/photo-1502161254066-6c74afbf07aa?auto=format&fit=crop&w=800&q=72',  // showroom: exterior
   'https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=72',  // showroom: paint
